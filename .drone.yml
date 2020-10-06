@@ -1,0 +1,13 @@
+pipeline:
+  build:
+    image: node
+    commands:
+      - npm install
+  publish:
+    image: plugins/docker
+    repo: teckinect/tecpay-persistance
+    username:
+      from_secret: u_magro_docker
+    password: 
+      from_secret: p_magro_docker
+    dry_run: false # remove this to publish.
