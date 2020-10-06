@@ -13,7 +13,7 @@ let broker_schema = {
         let url = process.env.MONGO_URL;
         console.log(url)
         await mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
-        console.log('Connected')
+        console.log('Connected');
     },
     actions: {
         async registerModel(ctx) {
